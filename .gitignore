@@ -1,5 +1,4 @@
 .env
-agent/*
-commands/*
 media/*
 media_xml/*
+agent/Media
