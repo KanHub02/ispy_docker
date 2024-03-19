@@ -1,0 +1,5 @@
+.env
+agent/*
+commands/*
+media/*
+media_xml/*

@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  ispyagentdvr:
+    image: mekayelanik/ispyagentdvr:latest
+    container_name: ispyagentdvr
+    env_file:
+      - .env
+    volumes:
+      - ./media_xml:/AgentDVR/Media/XML
+      - ./media:/AgentDVR/Media/WebServerRoot/Media
+      - ./commands:/AgentDVR/Commands
+    ports:
+      - 8090:8090
+      - 3478:3478/udp
+      - 50000-50010:50000-50010/udp
+    restart: unless-stopped
